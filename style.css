@@ -26,6 +26,48 @@
   font-style: normal;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  /* CODE GOES HERE */
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#slider img {
+  object-fit: cover;
+}
+
+@media (max-width: 639px) {
+  #slider .slick-track {
+    display: flex;
+  }
+
+  #featured .slick-slide {
+    height: auto;
+  }
+
+  #featured .slick-slide > div,
+  #featured .slick-slide .relative {
+    height: 100%;
+  }
+
+  #featured .slick-slide .relative {
+    min-height: 280px;
+  }
+
+  #slider img {
+    height: 280px;
+  }
+
+  #slider .relative > div p {
+    display: none;
+  }
 }
